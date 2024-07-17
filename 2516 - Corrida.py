@@ -1,11 +1,11 @@
 import sys
 
-def calcular_tempo_para_alcancar(S, va, vb):
+def time_to_get(S, va, vb):
     if va <= vb:
         return "impossivel"
     else:
-        tempo = S / (va - vb)
-        return f"{tempo:.2f}"
+        time = S / (va - vb)
+        return f"{time:.2f}"
 
 def main():
     input = sys.stdin.read()
@@ -13,8 +13,8 @@ def main():
     
     for line in lines:
         S, va, vb = map(int, line.split())
-        resultado = calcular_tempo_para_alcancar(S, va, vb)
-        print(resultado)
+        result = time_to_get(S, va, vb)
+        print(result)
     
     
 if __name__ == "__main__":
